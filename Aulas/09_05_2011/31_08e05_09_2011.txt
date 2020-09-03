@@ -1,0 +1,17 @@
+
+Aula dos dias 31/08 e 05/09 de 2011
+
+1 - Leia o código do programa LISTASE.CPP
+
+2 - Rode o programa executando as operações abaixo, e a cada operação mostre
+    a lista e desenhe em papel toda a representação gráfica da lista. Isto
+    vai ajuda-lo a entender o código depois.
+    - insira o elemento 1
+    - insira o elemento 2
+    - insira o elemento 5
+    - insira o elemento 3
+    - exclua o elemento 1
+
+3 - Agora estude o código do programa LISTASE.CPP
+
+

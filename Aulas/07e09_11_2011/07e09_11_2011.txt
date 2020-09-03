@@ -1,0 +1,7 @@
+
+Aula Laboratório de ALP 07 e 09 de novembro de 2011
+
+1 - Estude pela wikipédia ou outro site na internet o que é um heap.
+
+2 - Teste o programa Bord5.cpp de hoje com o heap sort.
+

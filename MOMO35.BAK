@@ -1,0 +1,29 @@
+#include <constream.h>
+#include <math.h>
+
+int fat(int n){
+  int r;
+  if ((n==1) || (n==0))
+    return 1;
+  else{
+    r=fat(n-1)*n;
+    return r;
+  }
+
+}
+
+int main(){
+  clrscr();
+  float num=100, s, den;
+  int cont=0;
+  while (cont<=20.0){
+    s+=num/den;
+    num--;
+    den=fat(cont);
+    cont++;
+    cout << "\t" << num;
+  }
+  cout<< "\n\n\n" << s;
+  getch();
+  return 0;
+}

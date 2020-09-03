@@ -1,0 +1,23 @@
+#include <constream.h>
+
+float result();
+
+float main(){
+  clrscr();
+  float valors;
+
+  valors=result();
+
+  cout<<" O valor da serie e "<<valors <<endl;
+  getch();
+  return 0;
+}
+
+float result(){
+  float s,  num=1.0, den;
+  for (den=1.0; den<=50.0; den++){
+    s+=num/den;
+    num+=2.0;
+  }
+  return s;
+}

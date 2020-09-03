@@ -1,0 +1,33 @@
+#include <constream.h>
+
+void main(void){
+  clrscr();
+  float massai, massaf;
+  int seg=0, min=0, hor=0;
+
+  cout<<"\n\tDigite a massa do material em g: ";
+  cin>>massai;
+  massaf=massai;
+
+  while (massaf>0.5){
+    massaf=massaf/2;
+    seg+=50;
+  }
+
+  cout<<"\n\tA massa incial e' : "<<massai;
+  cout<<"\n\tA massa final e' : "<<massaf;
+
+  if (seg>60){
+    min=seg/60;
+    seg=(seg%60);
+  }//--end of if
+
+  if (min>60){
+    hor=min/60;
+    min=(min%60);
+  }
+
+  cout<<"\n\tO tempo final e' : "<< hor << ":" << min << ":" << seg;
+
+  getch();
+}

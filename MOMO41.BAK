@@ -1,0 +1,16 @@
+#include <constream.h>
+#include <math.h>
+
+void main(){
+  clrscr();
+  double x, y;
+  do{
+  cout << "\n\tDigite um valor: ";
+  cin >>x;
+  y=2.5*cos(x/2.0);
+  cout << "\n\t" << x;
+  cout << "\n\t" << y;
+  } while (x>0);
+  
+  getch();
+}

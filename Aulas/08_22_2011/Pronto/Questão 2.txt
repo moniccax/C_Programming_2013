@@ -1,0 +1,27 @@
+Toda estrutura de dados lógica tem:
+a - uma regra de funcionamento;
+b - uma representação gráfica.
+c - um conjunto de convenções que  determinam
+    quando a estrutura está :
+    - vazia
+    - cheia
+    - esgotada
+d - uma forma de implementação;
+    Identifique os itens a,c e d no programa fornecido e desenhe o
+    item b.
+
+Respostas:
+
+a_ A fila e Pós incrementada e Pós decrementada. (fifo)
+
+c_
+- Vazia:  
+  Head=5
+  Tail=0
+
+-cheia
+ Head=5
+ Tail=4
+
+-esgotada
+ Uma fila circular não pode ficar esgotada.

@@ -1,0 +1,18 @@
+#include <constream.h>
+
+void main(void){
+  clrscr();
+  int idade, qtd_idade=-1, t_idade=0;
+  float media=0.0;
+
+  while (idade!=0){
+    cout << "\n\tDigite sua idade: ";
+    cin >> idade;
+    t_idade+=idade;
+    qtd_idade++;
+  } //----end of while
+
+  media=(float)t_idade/(float)qtd_idade;
+  cout << "A media e': " << media;
+  getch();
+}

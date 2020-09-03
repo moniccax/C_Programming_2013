@@ -1,0 +1,12 @@
+
+Aula dos dias 20 e 21 de junho de 2011
+
+1 - Ligue seu micro no linux.
+
+2 - compile, rode e estude o programa point1.cpp. Veja a diferenca no uso de um ponteiro tipado
+    para inteiro, do uso de um ponteiro generico void. Em alguns casos e' necessario fazer conversao de tipo.
+    (cast) do tipo de ponteiro. Repare bem o uso de & , * () e [].
+
+3 - Resolva o exercicio 1 da pagina ExercCriarClasse1.html fornecida.
+
+

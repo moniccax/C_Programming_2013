@@ -1,0 +1,92 @@
+
+Programação para aulas de laboratório de Algoritmo e Lógica de Programação
+
+Dias 22 e 24 de fevereiro de 2011
+
+1 - Mostrar como instalar o compilador BC 3.1 em Windows XP, e 7
+
+2 - Executar e compreender o programa aula1.cpp - Estudo do comando printf
+
+    Rode o programa como foi entregue. Observe as linhas 15 e 31.
+    Elas são uma alternativa a linha 30. Porém este recurso não funcionou em
+    meus testes com windows 7. No linux, no windows com DEVC++ ou CodeBlocks
+    é a única opção, uma vez que clrscr() é um recurso exclusivo dos compiladores
+    da Borland.
+
+    Observe o funcionamento da linha 35:
+      printf ("Decimais: %d %ld\n", 1977, 650000L);
+    Troque a especificação %ld para %d e rode novamente o programa. Observe a
+    impressão errada do valor 650.000 devido a estouro do valor inteiro. Note
+    também que não dá erro nem de compilação nem de execução ! ! !
+    Portanto não cometa este tipo de erro !
+
+    nas linhas 36 a 39:
+    note que 100 em decimal, é igual a 64 em hexadecimal e 144 em octal.
+
+3 - Executar e compreender o programa aula2.cpp - Estudo do comando scanf
+
+    Rode o programa como foi entregue, respondendo as perguntas com:
+    Entre um unico caracter: a
+    Entre uma palavra: bcd
+    Entre um inteiro: 1
+    Entre um numero hexadecimal: F
+    Entre um numero real: 3.141592
+
+    Rode novamente o programa como foi entregue, respondendo as perguntas com:
+    Entre um unico caracter: abcd
+    Entre uma palavra: <- o programa nem espera vc digitar isso! Porque ?
+    Entre um inteiro: 1.5
+    Entre um numero hexadecimal: <- o programa nem espera vc digitar isso! Porque ?
+    Entre um numero real: <- o programa nem espera vc digitar isso! Porque ?
+
+    Rode o programa como foi entregue, respondendo as perguntas com:
+    Entre um unico caracter: a
+    Entre uma palavra: bcd
+    Entre um inteiro: 1.0
+    Entre um numero hexadecimal: F <- o programa nem espera vc digitar isso! Porque ?
+    Entre um numero real: 3 <- o programa nem espera vc digitar isso! Porque ?
+
+    Isto ocorre porque foram digitados mais caracteres do que a leitura executada
+    respeitando a especificação de formato do scanf. Os caracteres excedentes ficaram
+    no buffer de teclado e foram utilizados indevidamente na próxima leitura.
+
+    Existem várias soluções diferentes:
+
+    1. A mais simples é utilizar a função getchar(); após o scanf() assim evitando
+       que a sujeira seja armazenada na próxima variável.
+    2. Outra opção é fazer o scanf(); mandar o lixo para o espaço: scanf(“%c%*c”, &ch);  dessa forma.
+    3. Simplesmente scanf(” %c”, &ch); notem que existe um espaço entre a aspa de abertura e o %c,
+       isso já resolve o problema.
+    4. scanf("%<o que vc quer>, %*c", &<sua var>, &lixo);
+    5. scanf("%<o que vc quer>, %*c", &<sua var>, &lixo);
+    6. Mais uma alternativa é usar a função __fpurge(stdin); lembrando para utilizar
+       essa função precisa incluir a lib #include<stdio_ext.h>, se utilizar ela não
+       precisa chamar stdio.h, essa lib só funciona no Linux.
+    7. rewind(stdin) aproveitando o conceito de stream do unix, onde o C foi gerado.
+       Funciona, mas é deselegante misturar comando de arquivo com E/S em teclado.
+    8. cin.ignore() que é um recurso de C++ e exige a biblioteca iostream. 
+
+
+    De todas as opções deve-se escolher a que mais gosta e evitar o uso de fflush(stdin),
+    porque na documentação da função fflush() está escrito:
+    “effect undefined for input streams”
+    (efeitos indefinidos para fluxos de entrada ).
+    Acontece que a função scanf() e uma função de entrada de dados não de saída,
+    se os criadores da função não sabem os possíveis efeitos do uso de fflush em streams
+    de entrada, então acaba não se tornando uma boa pratica de programação e em sistemas
+    unix-like ela não vai limpar o buffer.
+
+    Referências:
+
+      http://faq.cprogramming.com/cgi-bin/smartfaq.cgi?answer=1052863818&id=1043284351
+
+      http://forum.imasters.uol.com.br/index.php?/topic/336835-tutorial-systempause-e-fflushstdin/
+
+      http://www.utas.edu.au/infosys/info/documentation/C/CStdLib.html#fflush
+
+      http://www.vivaolinux.com.br/dica/Limpando-a-sujeirinha-no-buffer-do-teclado
+
+4 - Problema para vc resolver:
+
+    Como ler uma frase que contém espaços, números e caracteres especiais de pontuação ?
+

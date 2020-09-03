@@ -1,0 +1,20 @@
+
+Aula Laboratório de ALP dias 17 e 19 outubro de 2011
+
+1 - Estude o método de ordenação Shell acrescentado no programa BORD5.CPP fornecido.
+
+2 - Rode o programa como foi fornecido e anote os tempos de execução para o método de ordenação Shell
+    
+3 - Este programa foi escrito a muito tempo quando os computadores eram mais lentos. Nos computadores de hoje,
+    a execução é tão rápida que praticamente não permite a avaliação de desempenho dos métodos de ordenação.
+    Altere o programa para vetores maiores, e tipo de número maior. Repita os testes anotando os tempos.
+    
+4 - Comente suas conclusões com o professor.
+
+5 - Importante para estudar para a prova:
+    Escreva uma rotina de nome primo que recebe como parametro um número inteiro, e
+    devolve como resultado no próprio nome o maior número primo que ainda é menor
+    que o número recebido como parametro. Este número primo é a base para o particionamento
+    Shell ! ! !
+    
+    

@@ -1,0 +1,26 @@
+
+Aula dos dias 19 e 21 de setembro de 2011
+
+1 - Crie uma pasta com seu nome dentro da pasta 19_09_2011 do micro do professor.
+    Nela salve o seu trabalho prático da aula passada, isto é: LISTASE4.CPP e
+    LISTASE5.CPP.
+
+2 - Estude o programa incompleto LISTADE1.CPP e termine-o para a próxima aula.
+
+3 - Baseado nas rotinas do LISTADE1.CPP e no PILHA1.CPP crie o programa PILHAE1.CPP.
+
+4 - Baseado nas rotinas do LISTADE1.CPP e no FILA1.CPP crie o programa FILAE1.CPP.
+
+-------------------------------------------------------------------------
+
+A prova sera sobre os programas:
+
+LISTASE1.CPP     LISTASE2.CPP     LISTASE3.CPP
+LISTASE4.CPP     LISTASE5.CPP     LISTADE1.CPP
+PILHAE1.CPP      FILAE1.CPP
+
+CUIDADO! O programa LISTADE1.CPP usa ponteiros com indireção múltipla.
+
+Os programas acima citados substituem e a lista de exercícios para a próxima prova.
+
+

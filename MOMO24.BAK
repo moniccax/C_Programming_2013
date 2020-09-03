@@ -1,0 +1,11 @@
+#include <constream.h>
+
+void main(void){
+  clrscr();
+  float s;
+  for(int i=1, j=1; i<99, j<50; i+=2, j++)
+    s+=(float)i/(float)j;
+  cout<<s;
+
+   getch();
+}

@@ -1,0 +1,7 @@
+
+Aula Laboratório de ALP 21 e 23 de novembro de 2011
+
+1 - Estude pela wikipédia ou outro site na internet sobre o quick sort.
+
+2 - Teste o programa Bord5.cpp de hoje com o quick sort.
+

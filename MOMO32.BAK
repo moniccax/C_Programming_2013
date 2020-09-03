@@ -1,0 +1,22 @@
+#include <constream.h>
+#include <math.h>
+#include <stdio.h>
+
+void main(){
+  clrscr();
+  long float s, sinal=1.0, den, aux=1.0, pi=0.0;
+  int cont=1;
+  while (cont<=51){
+    den=pow(aux,3);
+    cout<< den<<endl;
+    aux=aux+2;
+    cout<<aux<<endl;
+    s+=((1.0/den)*sinal);
+    sinal=sinal*(-1.0);
+    cont++;
+    cout<< s<<endl;
+  }
+  pi=(pow(s*32,1/3));
+  cout << pi;
+  getch();
+}

@@ -1,0 +1,429 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Programação em C/C++ - Exercícios sobre Classes</title></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 153);" link="#000099" vlink="#990099" alink="#000099">
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td><img src="ExercCriarClasse1_arquivos/LogoPUCRS-Viva-BG-Yellow.png" alt="" style="width: 368px; height: 136px;"></td>
+      <td><img title="FACIN PUCRS" style="width: 170px; height: 164px;" alt="" src="ExercCriarClasse1_arquivos/LogoFACIN.png"></td>
+      <td style="text-align: right;"><img style="width: 356px; height: 157px;" alt="" src="ExercCriarClasse1_arquivos/logo_grv_low3.png"></td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="text-align: center;">
+<hr style="width: 100%; height: 2px;"><big style="font-weight: bold; color: rgb(51, 51, 255);"><big><big><span style="font-family: Arial;">Programação C/C++</span><span style="font-family: Arial;"><br>
+</span></big></big></big>
+</div>
+
+<div style="font-weight: bold; color: rgb(51, 51, 255); font-family: Arial; text-align: center;">
+<hr style="width: 100%; height: 2px;"></div>
+
+<div style="text-align: center;"><span style="font-family: Arial;"></span><big><big><a style="font-family: Arial;" href="http://www.inf.pucrs.br/%7Epinho">Prof.
+Márcio Sarroglia
+Pinho</a></big></big><br></div>
+<big><big></big></big>
+<h1 style="text-align: center;">Exercícios sobre
+CLASSES em C++<span style="font-weight: bold;"></span><span style="font-weight: bold;"></span></h1>
+
+
+<big><big style="font-weight: bold; color: rgb(255, 0, 0);"><big></big></big><big><big><span style="font-weight: bold; color: rgb(255, 0, 0);"></span></big></big></big>
+<hr style="width: 100%; height: 2px;">
+<h1 style="text-align: center;"><span style="font-weight: bold;"></span></h1><p class="Simples" style="text-align: justify;"><big><big>1. Crie
+uma classe para
+representar uma pessoa, com os atributos privados de nome, idade e
+altura. Crie os métodos públicos&nbsp;
+necessários&nbsp;para <span style="font-style: italic;">sets</span>
+e <span style="font-style: italic;">gets</span> e também um
+métodos para imprimir os dados de uma pessoa.&nbsp;<br>
+</big></big></p>
+<hr style="width: 100%; height: 2px;">
+<p class="Simples" style="text-align: justify;"><big><big>2. Crie uma
+classe <span style="font-weight: bold;">Agenda</span> que armazena 10 pessoas e seja capaz de
+operações como:<br>
+<br>
+<span style="font-family: monospace;">class Agenda{</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; Pessoa
+Povo[10];</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">public:</span><br style="font-family: monospace;">
+</big></big>
+</p>
+<div style="margin-left: 40px; font-family: monospace;"><big><big>void
+armazenaPessoa(string nome, int idade, float altura);</big></big><br>
+<big><big>void removePessoa(string nome);</big></big><br>
+<big><big>int buscaPessoa(</big></big><big><big>string nome</big></big><big><big>);
+// informa em que posição da agenda está a pessoa</big></big><br>
+<big><big>void imprimePovo(); // imprime todos os dados de todas as
+pessoas da agenda</big></big><br>
+<big><big>void imprimePessoa(int i); // imprime os dados da pessoa que
+está na posição 'i' da agenda</big></big><br>
+</div>
+<big><big><span style="font-family: monospace;">};</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">// ---------------------------------------<br>
+</span><br style="font-family: Arial;">
+Teste sua genda com o programa apresentado abaixo.<span style="font-family: monospace;"><br>
+<br>
+#include &lt;iostream&gt;<br>
+#include "Agenda.h"<br>
+<br>
+<br>
+int main () {<br>
+&nbsp;&nbsp;&nbsp; char linha[] = "------------------------------------------------\n";<br>
+&nbsp;&nbsp;&nbsp; Agenda A;<br>
+<br>
+&nbsp;&nbsp;&nbsp; A.armazenaPessoa("Abel", 22, 1.78);<br>
+&nbsp;&nbsp;&nbsp; A.armazenaPessoa("Tiago", 20, 1.80);<br>
+&nbsp;&nbsp;&nbsp; A.imprimePovo();<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; linha;<br>
+<br>
+&nbsp;&nbsp;&nbsp; int posicao = A.buscaPessoa("Tiago");<br>
+&nbsp;&nbsp;&nbsp; if (posicao &gt; 0) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A.imprimePessoa(posicao);<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; linha;<br>
+<br>
+&nbsp;&nbsp;&nbsp; A.removePessoa("Tiago");<br>
+&nbsp;&nbsp;&nbsp; A.imprimePovo();<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; linha;<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp; return 0;<br>
+}</span><span style="font-family: monospace;"><br>
+</span></big></big>
+<hr style="width: 100%; height: 2px;">
+<p class="Simples" style="text-align: justify;"><span style="font-family: Arial;"><big><big>3. Crie uma classe denominada <i style="">Elevador</i> para armazenar as informações de
+um elevador dentro de um
+prédio.&nbsp;</big></big></span><big><big><span style="font-family: Arial;"></span></big></big></p>
+<p class="Simples" style="text-align: justify;"><big><big><span style="font-family: Arial;">A classe deve armazenar o andar atual
+(0=térreo),
+total de andares no prédio, excluindo o térreo,
+capacidade do elevador, e
+quantas pessoas estão presentes nele. <o:p></o:p></span></big></big></p>
+<p class="ListadeItens" style=""><big><big><span style="font-size: 12pt; font-family: Arial;"><o:p>&nbsp;</o:p></span><br>
+A classe
+deve também disponibilizar os seguintes métodos:</big></big></p>
+<ul>
+  <li><big><big><span style="font-weight: bold;">inicializa:</span>
+que deve receber como parâmetros: a capacidade do elevador e o
+total de andares
+no prédio (os elevadores sempre começam no térreo
+e vazios);</big></big></li>
+  <li><big><big><span style="font-weight: bold;">entra:</span>
+para acrescentar uma pessoa no elevador (só deve acrescentar se
+ainda houver
+espaço);</big></big></li>
+  <li><big><big><span style="font-weight: bold;">sai</span>:
+para remover uma pessoa do elevador (só deve remover se houver
+alguém dentro
+dele);</big></big></li>
+  <li><big><big><span style="font-weight: bold;">sobe:</span>
+para subir um andar (não deve subir se já estiver no
+último andar);</big></big></li>
+  <li><big><big><span style="font-weight: bold;">desce: </span>para
+descer um andar (não deve descer se já estiver no
+térreo);</big></big></li>
+  <li><big><big><span style="font-weight: bold;">get....:</span>
+métodos para obter cada um dos os dados armazenados.</big></big><span style="text-decoration: underline;">&nbsp;</span><br>
+  </li>
+</ul>
+<a href="http://www.inf.pucrs.br/%7Epinho/CPP/Exercicios/Classes/Respostas/Elevador.cpp"><big><big></big></big></a><br>
+<hr style="width: 100%; height: 2px;"><big><big>4. Crie uma classe em
+C++ chamada Relogio para armazenar um horário, composto por
+hora, minuto e segundo. A classe deve representar esses componentes de
+horário e deve apresentar os métodos descritos a seguir:<br>
+</big></big>
+<ul>
+  <li><big><big>um método chamado <span style="font-weight: bold;">setHora</span>, que deve receber o
+horário desejado por parâmetro (hora, minuto e segundo);</big></big></li>
+  <li><big><big>um método chamado <span style="font-weight: bold;">getHora</span> para retornar o
+horário atual, através de 3 variáveis passadas por
+referência;</big></big></li>
+  <li><big><big>um método para <span style="font-weight: bold;">avançar</span>
+o horário para o próximo segundo (lembre-se de atualizar
+o minuto e a hora, quando for o caso).&nbsp;</big></big></li>
+</ul>
+<br>
+<hr style="width: 100%; height: 2px;"><big><big>5. Definir uma classe
+que represente um <span style="font-weight: bold;">círculo</span>.<br>
+<br>
+Esta classe deve possuir </big></big><big><big>métodos <span style="font-weight: bold;">Privados</span> para:<br>
+</big></big>
+<ol style="list-style-type: lower-alpha;">
+  <li><big><big>calcular a área do círculo;</big></big></li>
+  <li><big><big>calcular a distância entre os centros de 2
+círculos;</big></big></li>
+  <li><big><big>calcular a circunferência do círculo. </big></big></li>
+</ol>
+<big><big>E</big></big> <big><big>métodos <span style="font-weight: bold;">Públicos</span> para:<br>
+</big></big>
+<ol style="list-style-type: lower-alpha;">
+  <li><big><big>definir o raio do círculo, dado um número
+real;</big></big></li>
+  <li><big><big>aumentar o raio do círculo, dado um percentual
+de aumento;</big></big></li>
+  <li><big><big>definir o centro&nbsp;do círculo, dada
+uma&nbsp;posição (X,Y);</big></big></li>
+  <li><big><big>imprimir o valor do raio;</big></big></li>
+  <li><big><big>imprimir o centro do círculo.</big></big></li>
+  <li><big><big>imprimir a área do círculo.</big></big></li>
+</ol>
+<big><big>Criar um <span style="font-weight: bold;">programa principal</span>
+para testar a classe.<br>
+</big></big>
+<hr style="width: 100%; height: 2px;"><big><big>6. </big></big>&nbsp;<big><big>Implemente
+uma <b>televisão</b>. A televisão tem um controle de
+volume do som e um controle de seleção de canal. </big></big>
+<ul>
+  <li><big><big>O controle de volume permite aumentar ou diminuir a
+potência do volume de som em uma unidade de cada vez.</big></big></li>
+  <li><big><big>O
+controle de canal também permite aumentar e diminuir o
+número do canal
+em uma unidade, porém, também possibilita trocar para um
+canal indicado.</big></big></li>
+  <li><big><big>Também devem existir métodos para
+consultar o valor do volume de som e o canal selecionado.</big></big></li>
+</ul>
+<big><big>
+No programa principal, crie uma televisão e troque de canal
+algumas
+vezes. Aumente um pouco o volume, e exiba o valor de ambos os atributos.<br>
+<a href="http://www.inf.pucrs.br/%7Epinho/CPP/Exercicios/Classes/Respostas/Televisao.cpp"><br>
+</a>
+</big></big>
+<hr style="width: 100%; height: 2px;"><big><big>7. Implemente um
+condicionador de ar. O condicionador possui 10
+potências diferentes. Cada unidade da potência do
+condicionador diminui a temperatura do ambiente em 1.8oC. A
+variação que o condicionador consegue causar está
+no intervalo [0oC - 18oC], ou seja, zero graus de
+variação quando desligado e dezoito graus de
+variação quando ligado na potência máxima. </big></big><br>
+<big><big><br>
+Através de um sensor, o
+condicionador é informado da temperatura externa. Dada essa
+temperatura
+e a potência selecionada, o condicionador calcula e retorna a
+temperatura do ambiente. <br>
+<br>
+No programa principal, crie dois
+condicionadores. Informe duas temperaturas externas diferentes para
+cada um (ex: 25<sup>o</sup>C e 31<sup>o</sup>), ajuste o segundo em
+potência máxima (10) e o primeiro em potência
+média (5). Finalmente,
+exiba a temperatura resultante de cada ambiente.</big></big><br>
+<br>
+<hr style="width: 100%; height: 2px;"><big><big>8. Implemente um <b>carro</b>.
+O tanque de combustível do carro armazena no máximo 50
+litros de gasolina. O carro consome 15 km/litro. Deve ser
+possível: </big></big>
+<ul>
+  <li><big><big>Abastecer o carro com uma certa quantidade de gasolina;</big></big></li>
+  <li><big><big>Mover o carro em uma determinada distância
+(medida em km);</big></big></li>
+  <li><big><big>Retornar a quantidade de combustível e a
+distância total percorrida.</big></big></li>
+</ul>
+<big><big>
+No programa principal, crie 2 carros. Abasteça 20 litros no
+primeiro e
+30 litros no segundo. Desloque o primeiro em 200 km e o segundo em 400
+km. Exiba na tela a distância percorrida e o total de
+combustível
+restante para cada um.<br>
+<span style="text-decoration: underline;"></span><a href="http://www.inf.pucrs.br/%7Epinho/CPP/Exercicios/Classes/Respostas/Carro.zip"></a><br>
+</big></big>
+<hr style="width: 100%; height: 2px;"><big><big><big><big> </big></big></big></big><span style="font-weight: bold;"></span><big><big>9. Definir uma classe que
+represente uma <span style="font-weight: bold;">lista</span> de
+inteiros. <br>
+<br>
+Esta classe deve armazenar os dados em um vetor de inteiros de tamanho
+10.<br>
+Deve existir um vetor auxiliar de que indique, na posição
+Vaux[i], qual o próximo elemento da lista após o elemento
+que está na posição 'i'.<br>
+<br>
+Na figura abaixo, considere que a lista inicia na posição
+3.<br>
+No vetor auxiliar, o valor -1 indica que a posição
+correspondente no vetor 'dados' está vazia. Por sua vez, </big></big><big><big>o
+valor -2 indica que a posição correspondente no vetor
+'dados' é o último elemento da lista. </big></big><big><big>
+<br>
+<br>
+</big></big>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="font-weight: bold; text-align: right; font-family: monospace;"><big>Índice</big></td>
+      <td style="text-align: center; font-weight: bold; font-family: monospace;">0</td>
+      <td style="text-align: center; font-weight: bold; font-family: monospace;">1</td>
+      <td style="text-align: center; font-weight: bold;">2</td>
+      <td style="text-align: center; font-weight: bold;">3</td>
+      <td style="text-align: center; font-weight: bold;">4</td>
+      <td style="text-align: center; font-weight: bold;">5</td>
+      <td style="text-align: center; font-weight: bold;">6</td>
+      <td style="text-align: center; font-weight: bold;">7</td>
+      <td style="text-align: center; font-weight: bold;">8</td>
+      <td style="text-align: center; font-weight: bold;">9</td>
+      <td style="text-align: center; font-weight: bold;">10</td>
+    </tr>
+    <tr>
+      <td style="font-weight: bold; text-align: right; font-family: monospace;"><big>Dados</big></td>
+      <td style="text-align: center; font-family: monospace;">10</td>
+      <td style="text-align: center; font-family: monospace;">1</td>
+      <td style="text-align: center; font-family: monospace;">VAZIO</td>
+      <td style="text-align: center; font-family: monospace;">9</td>
+      <td style="text-align: center; font-family: monospace;">VAZIO</td>
+      <td style="text-align: center; font-family: monospace;">11</td>
+      <td style="text-align: center; font-family: monospace;">34</td>
+      <td style="text-align: center; font-family: monospace;">VAZIO</td>
+      <td style="text-align: center; font-family: monospace;">VAZIO</td>
+      <td style="text-align: center; font-family: monospace;">VAZIO</td>
+      <td style="text-align: center; font-family: monospace;">VAZIO</td>
+    </tr>
+    <tr>
+      <td style="font-weight: bold; text-align: right; font-family: monospace;"><big>Vetor
+Auxiliar(próximo)</big></td>
+      <td style="text-align: center; font-family: monospace;">5</td>
+      <td style="text-align: center; font-family: monospace;">6</td>
+      <td style="text-align: center; font-family: monospace;">-1</td>
+      <td style="text-align: center; font-family: monospace;">0</td>
+      <td style="text-align: center; font-family: monospace;">-1</td>
+      <td style="text-align: center; font-family: monospace;">1</td>
+      <td style="text-align: center; font-family: monospace;">-2</td>
+      <td style="text-align: center; font-family: monospace;">-1</td>
+      <td style="text-align: center; font-family: monospace;">-1</td>
+      <td style="text-align: center; font-family: monospace;">-1</td>
+      <td style="text-align: center; font-family: monospace;">-1</td>
+    </tr>
+  </tbody>
+</table>
+<big><big><br>
+Ao ser impressa, esta lista deve apresentar os seguintes valores: 9,
+10, 11, 1, 34.<br>
+<br>
+A classe de deve ter métodos&nbsp;para:<br>
+</big></big>
+<ul>
+  <li>
+    <p><big><big><span style="font-weight: bold;">Inserção:
+    </span>este método deve inserir&nbsp;um dado (int) na&nbsp;</big></big><big><big>lista</big></big><big><big>,
+após o último dado inserido. Este método deve
+retornar 1 quando conseguir inserir e 0 quando não houver mais
+espaço na lista. Internamente, a inserção deve ser
+feita no primeiro espaço livre do vetor de dados;</big></big></p>
+  </li>
+</ul>
+<ul>
+  <li>
+    <p><big><big><span style="font-weight: bold;">Remoção:
+    </span>Remover um elemento da&nbsp;</big></big><big><big>lista</big></big><big><big>
+dado seu valor. </big></big><big><big> Este método deve
+retornar 1 quando conseguir remover e 0 quando o dado não
+existir na lista;</big></big></p>
+  </li>
+  <li>
+    <p><big><big><span style="font-weight: bold;">Impressão:</span>
+Imprime os dados na lista na ordem que foram inseridos.</big></big></p>
+  </li>
+</ul>
+<div style="margin-left: 80px; font-family: monospace;"><big><big>void
+ListaEncadeadaComVetor::imprimeLista()</big></big><br>
+<big><big>{</big></big><br>
+</div>
+<div style="margin-left: 80px;">
+<pre style="font-family: monospace;"><big><big>    int pos = inicio;<br>    cout &lt;&lt; "Lista: ";<br>    cout &lt;&lt; "Inicio: " &lt;&lt; pos &lt;&lt; endl;<br>    for(int i=0; i&lt; TAM; i++)<br>    {<br>        cout &lt;&lt; Dados[pos] &lt;&lt; "(" &lt;&lt; pos &lt;&lt; ")";<br>        pos = Aux[pos];<br>        if (pos == -2)<br>            break;<br>        else cout &lt;&lt; ", ";<br>    }<br>    cout &lt;&lt; endl;<br><br>}</big></big></pre>
+<big>
+</big></div>
+<br>
+<big><big>
+Sugestão para definição da classe:<br>
+</big></big>
+<pre style="margin-left: 80px;"><big><big>#include &lt;iostream&gt;<br>using namespace std;<br><br>const int TAM = 10;<br><br>class ListaEncadeadaComVetor{<br>    int inicio;<br>    int Dados[TAM];<br>    int Aux[TAM];<br><br>    int achaPosUltimo();<big><big><code><span style="font: 8pt Courier New;"><big><span class="style2">// Este método faz a busca do último a partir dos<br>			// dados da lista e não a partir do vetor auxiliar</span></big></span></code></big></big><br>   &nbsp;int achaPosLivre(); <big><big><code><span style="font: 8pt Courier New;"><big><span class="style2">// Este método faz a busca de um espaço lvre<br>			// a partir do vetor auxiliar</span></big></span></code></big></big>     <big><big><code><span style="font: 8pt Courier New;"><big><span class="style2">	</span></big></span></code></big></big><br>public:<br>    </big></big><big><big>ListaEncadeadaComVetor</big></big><big><big> ();<br>    int insereDado(int D);<br>    int removeDado(int D);<br>    void imprimeLista();<br>};</big></big><br></pre>
+<big><big>
+<br>
+</big></big>
+<hr style="width: 100%; height: 2px;"><big><big>10. </big></big><big><big>Implemente
+um <b>Veículo</b>. O veículo é composto por
+várias partes: um motor, um tanque de combustível e 4
+pneus.<br>
+O funcionamento do veículo depende das suas partes, da seguinte
+forma:
+</big></big>
+<ul>
+  <li><big><big><b>Motor</b> </big></big>
+    <ul>
+      <li><big><big>Possui uma potência (em hp), uma taxa fixa de
+consumo (em km/litro) e um tanque de combustível (ver abaixo).</big></big></li>
+      <li><big><big>Possui um comando para <b>avançar</b> uma
+determinada quantidade de km. Se a pressão de mais de um pneu
+(ver abaixo) estiver abaixo de 20 lb, o consumo do veículo
+aumenta em 30%. Se não houver combustível suficiente, o
+veículo avança até o tanque esvaziar.</big></big></li>
+    </ul>
+  </li>
+  <li><big><big><b>Tanque de Combustível</b> </big></big>
+    <ul>
+      <li><big><big>Possui uma determinada capacidade e quantidade
+atual de combustível (ambos em litros).</big></big></li>
+      <li><big><big>Pode ser <b>abastecido</b> com uma certa
+quantidade de combustível, limitado à sua capacidade
+máxima.</big></big></li>
+    </ul>
+  </li>
+  <li><big><big><b>Pneu</b> </big></big>
+    <ul>
+      <li><big><big>Cada pneu possui uma determina pressão (em
+lb).</big></big></li>
+      <li><big><big>Pode ser <b>calibrado</b> com determinada
+pressão informada (positiva ou negativa, sendo somada à
+atual).</big></big></li>
+    </ul>
+  </li>
+</ul>
+<big><big>
+Implemente as classes acima, usando composição quando
+necessário. Modularize o código e crie um <i>Makefile</i>
+para compilar
+o projeto (ou use o Code::Blocks).<br>
+Lembre-se de implementar <i>gets</i> e <i>sets</i>
+necessários, bem como construtores adequados.
+<br>
+No programa principal, faça as seguintes
+operações:
+</big></big>
+<ul>
+  <li><big><big>Instancie um veículo cujo motor tem 71 hp,
+consumo de 12 km/litro, tanque com capacidade para 50 litros, pneus
+dianteiros com 27 lb e traseiros com 23 lb.</big></big></li>
+  <li><big><big>Abasteça o tanque com 30 litros.</big></big></li>
+  <li><big><big>Exiba na tela as informações sobre cada
+componente do veículo.</big></big></li>
+  <li><big><big>Avance 300 km.</big></big></li>
+  <li><big><big>Reduza a pressão do pneu traseiro esquerdo para
+17 lb.</big></big></li>
+  <li><big><big>Avance 100 km.</big></big></li>
+  <li><big><big>Reduza a pressão do pneu dianteiro direito para
+18 lb.</big></big></li>
+  <li><big><big>Abasteça mais 10 litros.</big></big></li>
+  <li><big><big>Avance 200 km.</big></big></li>
+</ul>
+<big><big>
+A cada operação de movimento, mostre na tela a
+distância percorrida e a quantidade de combustível
+restante.<br style="font-family: Arial;">
+</big></big><br>
+<hr style="width: 100%; height: 2px;"><big><big><br>
+FIM.<br>
+<br>
+<br>
+<br>
+</big></big>
+</body></html>

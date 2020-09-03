@@ -1,0 +1,22 @@
+
+Aula de Laboratório de ALP 12 e 14 de setembro de 2011
+
+1 - Leia os programas:
+
+    listase1.cpp - Exemplo de lista simplesmente encadeada sobre vetor estatico com ponteiro estatico de conteudo inteiro.
+    listase2.cpp - Exemplo de lista simplesmente encadeada sobre vetor com alocacao dinamica e ponteiros inteiros com conteudo inteiro. 
+    listase3.cpp - Exemplo de lista simplesmente encadeada sobre vetor com alocacao dinamica e ponteiros dinamicos com conteudo
+                   inteiro.
+
+2 - Rode e teste os programas. Observe que em todos eles existe um erro quando se enche a lista com 5 elementos, e se remove um elemento,
+    e repete-se a remoção do elemento. Descubra o erro e corrija.
+
+3 - A partir do listase3.cpp , elabore um programa que implementa um Exemplo de lista simplesmente encadeada sobre vetor com alocacao
+    dinamica e ponteiros dinamicos com  conteudo de endereco. Este sera o programa listase4.cpp.
+
+4 - A partir do listase4.cpp , elabore um programa que implementa um Exemplo de lista simplesmente encadeada sobre nodos com alocacao
+    dinamica e ponteiros dinamicos com  conteudo de endereco. Este sera o programa listase5.cpp.
+
+OBSERVAÇÃO: Os itens 3 e 4 deste guia serão avaliados na aula da próxima semana!!!
+
+
